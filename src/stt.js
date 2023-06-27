@@ -40,6 +40,7 @@ export default function STT() {
     document.body.appendChild(audio);
   };
 
+  const [recorderStopState, setRecorderStopState] = useState(false);
   // -------------------------------------------------------------------
   // detection
   // -------------------------------------------------------------------
@@ -63,9 +64,7 @@ export default function STT() {
         samcc = samcc + 1;
         setCounter(counter++);
       } else {
-        console.log('timmer stop here 1s');
-        recorderControls.stopRecording();
-        stop();
+        setRecorderStopState(true);
       }
       console.log(samcc);
       result = '';
@@ -73,7 +72,7 @@ export default function STT() {
   });
 
   // -- useeffect
-  // const [timmer, setTimmer] = useState(0);
+  const [timmer, setTimmer] = useState(0);
   // useEffect(() => {
   //   setTimmer(recorderControls.recordingTime);
   //   if (recorderControls.recordingTime == 5) {
@@ -82,6 +81,19 @@ export default function STT() {
   //     stop();
   //   }
   // }, [recorderControls.recordingTime]);
+
+  useEffect(() => {
+    setTimmer(recorderControls.recordingTime);
+    if (recorderControls.recordingTime == 5) {
+      setRecorderStopState(true);
+    }
+  }, [recorderControls.recordingTime]);
+
+  useEffect(() => {
+    console.log('timmer stop here');
+    recorderControls.stopRecording();
+    stop();
+  }, [recorderStopState]);
 
   return (
     <div
@@ -108,11 +120,19 @@ export default function STT() {
         onClick={() => {
           listen();
           recorderControls.startRecording();
+          setRecorderStopState(false);
         }}
       >
         Start
       </button>
-      <button className="btn-link mt-3 mb-3" onClick={stop}>
+      <button
+        className="btn-link mt-3 mb-3"
+        onClick={() => {
+          stop();
+          recorderControls.stopRecording();
+          setRecorderStopState(false);
+        }}
+      >
         stop
       </button>
 
