@@ -63,8 +63,9 @@ export default function STT() {
         samcc = samcc + 1;
         setCounter(counter++);
       } else {
-        stop();
+        console.log('timmer stop here 1s');
         recorderControls.stopRecording();
+        stop();
       }
       console.log(samcc);
       result = '';
@@ -72,15 +73,15 @@ export default function STT() {
   });
 
   // -- useeffect
-  const [timmer, setTimmer] = useState(0);
-  useEffect(() => {
-    setTimmer(recorderControls.recordingTime);
-    if (recorderControls.recordingTime == 5) {
-      console.log('timmer stop here');
-      recorderControls.stopRecording();
-      stop();
-    }
-  }, [recorderControls.recordingTime]);
+  // const [timmer, setTimmer] = useState(0);
+  // useEffect(() => {
+  //   setTimmer(recorderControls.recordingTime);
+  //   if (recorderControls.recordingTime == 5) {
+  //     console.log('timmer stop here');
+  //     recorderControls.stopRecording();
+  //     stop();
+  //   }
+  // }, [recorderControls.recordingTime]);
 
   return (
     <div
