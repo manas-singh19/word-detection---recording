@@ -5,6 +5,8 @@ import { useSpeechRecognition, useSpeechSynthesis } from 'react-speech-kit';
 import { AudioRecorder, useAudioRecorder } from 'react-audio-voice-recorder';
 
 export default function STT() {
+  const [verified, setverified] = useState(false);
+
   // -------------------------------------------------------------------
   // audio recoeding modles
   // -------------------------------------------------------------------
@@ -62,9 +64,12 @@ export default function STT() {
       ifRam = tstring.slice(-1);
       if (ifRam == 'Ram') {
         samcc = samcc + 1;
+        setValue(samcc);
         setCounter(counter++);
+        setverified(true);
       } else {
         setRecorderStopState(true);
+        setverified(false);
       }
       console.log(samcc);
       result = '';
@@ -153,6 +158,9 @@ export default function STT() {
       <span style={{ marginTop: '20px' }}>
         -- {recorderControls.recordingTime} --
       </span>
+
+      {verified && <p>Verified</p>}
+
       <div style={{ display: 'none' }}>
         <AudioRecorder
           onRecordingComplete={(blob) => addAudioElement(blob)}
