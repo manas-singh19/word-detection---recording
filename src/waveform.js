@@ -22,7 +22,7 @@ export default function Waveform() {
         />
       )}
 
-      {blob && (
+      {/* {blob && (
         <AudioVisualizer
           blob={blob}
           width={500}
@@ -31,9 +31,9 @@ export default function Waveform() {
           gap={0}
           barColor={'red'}
         />
-      )}
+      )} */}
 
-      {blob && (
+      {/* {blob && (
         <AudioVisualizer
           blob={blob}
           width={500}
@@ -42,7 +42,7 @@ export default function Waveform() {
           gap={2}
           barColor={'lightblue'}
         />
-      )}
+      )} */}
     </div>
   );
 }
