@@ -19,6 +19,9 @@ export default function Waveform() {
           mediaRecorder={recorder.mediaRecorder}
           width={200}
           height={75}
+          barColor="red"
+          shadowColor="yellow"
+          barSpacing="10"
         />
       )}
 
