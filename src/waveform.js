@@ -7,6 +7,9 @@ export default function Waveform() {
   const [blob, setBlob] = useState();
   const recorder = useAudioRecorder();
 
+  const renderStyle= ()=>{
+      
+  }
   return (
     <div>
       <AudioRecorder
@@ -18,10 +21,13 @@ export default function Waveform() {
         <LiveAudioVisualizer
           mediaRecorder={recorder.mediaRecorder}
           width={200}
-          height={75}
+          height={100}
           barColor="red"
           shadowColor="yellow"
-          barSpacing="10"
+          barSpacing={100}
+          barWidth={4}
+          barHeight={12}
+          renderStyle={}
         />
       )}
 
