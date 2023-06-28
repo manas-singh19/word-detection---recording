@@ -6,7 +6,7 @@ import Waveform from './waveform';
 export default function App() {
   return (
     <div>
-      <App />
+      <Waveform />
     </div>
   );
 }
