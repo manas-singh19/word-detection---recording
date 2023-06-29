@@ -18,4 +18,14 @@ https://github.com/andreidobrinski/react-wavesurfer-demo
 
 ## --- not try yet
 
-https://wavesurfer-js.org/examples/#record.js
+1: https://wavesurfer-js.org/examples/#record.js
+
+2: https://codesandbox.io/s/record-audio-and-download-wav-or-mp3-react-audio-analyser-x5653?file=/src/AudioRecorder.js
+
+# react-native
+
+https://www.npmjs.com/package/react-native-soundcloud-waveform
+
+# react.js drumb
+
+https://www.joshwcomeau.com/react/announcing-use-sound-react-hook/
