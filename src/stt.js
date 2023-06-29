@@ -4,6 +4,8 @@ import { useSpeechRecognition, useSpeechSynthesis } from 'react-speech-kit';
 
 import { AudioRecorder, useAudioRecorder } from 'react-audio-voice-recorder';
 
+import { AudioVisualizer, LiveAudioVisualizer } from 'react-audio-visualize';
+
 export default function STT() {
   const [verified, setverified] = useState(false);
 
@@ -43,6 +45,7 @@ export default function STT() {
   };
 
   const [recorderStopState, setRecorderStopState] = useState(false);
+
   // -------------------------------------------------------------------
   // detection
   // -------------------------------------------------------------------
@@ -170,6 +173,20 @@ export default function STT() {
           showVisualizer={true}
         />
       </div>
+
+      {recorderControls.mediaRecorder && (
+        <LiveAudioVisualizer
+          mediaRecorder={recorderControls.mediaRecorder}
+          width={200}
+          height={100}
+          barColor="red"
+          shadowColor="yellow"
+          barSpacing={100}
+          barWidth={4}
+          barHeight={12}
+          renderStyle={}
+        />
+      )}
     </div>
   );
 }
