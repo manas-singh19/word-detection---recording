@@ -9,7 +9,8 @@
     "react-audio-visualize": "^1.1.0",
     "react-audio-voice-recorder": "^1.2.1",
     "react-dom": "18.2.0",
-    "react-speech-kit": "^3.0.1"
+    "react-speech-kit": "^3.0.1",
+    "waveform-audio-recorder": "^1.0.6"
   },
   "scripts": {
     "start": "react-scripts start",

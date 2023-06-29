@@ -187,6 +187,7 @@ export default function STT() {
           renderStyle={}
         />
       )}
+      <AudioVisualizer mediaRecorder={URL}/>
     </div>
   );
 }
