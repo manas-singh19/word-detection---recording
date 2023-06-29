@@ -4,12 +4,12 @@ import STT from './stt.js';
 import App from './recording';
 import Waveform from './waveform';
 import WaveformTwo from './waveformtwo';
-import WaveformThreeAudio from './waveformthreeWithAudio';
+import WaveformThree from './waveformthree';
 import ClassHTML from './classHtml';
 export default function App() {
   return (
     <div>
-      <WaveformThreeAudio />
+      <WaveformThree />
     </div>
   );
 }
