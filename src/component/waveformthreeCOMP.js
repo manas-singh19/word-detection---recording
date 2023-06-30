@@ -15,9 +15,11 @@ const Waveform = ({ audio }) => {
     const waveSurfer = WaveSurfer.create({
       container: containerRef.current,
       responsive: true,
-      barWidth: 2,
-      barHeight: 10,
+      barWidth:2,
+      barHeight: 6,
       cursorWidth: 0,
+      waveColor: 'violet',
+      progressColor: '#383351',
     });
     waveSurfer.load(audio);
     waveSurfer.on('ready', () => {

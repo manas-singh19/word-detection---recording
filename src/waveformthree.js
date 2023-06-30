@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import Waveform from './component/waveformthreeCOMP.js';
 
 const WaveformThree = () => {
