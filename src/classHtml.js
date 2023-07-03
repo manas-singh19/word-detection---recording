@@ -1,5 +1,5 @@
 import React from 'react';
-import importScript from 'customHooks/importScript';
+import importScript from './customHook';
 const Demo = (props) => {
   importScript('./class.js');
 };
