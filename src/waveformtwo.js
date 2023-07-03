@@ -17,9 +17,7 @@ export default function WaveformTwo() {
     <div className="App">
       <button
         onClick={
-          recorderState?.initRecording
-            ? recorderState?.saveRecording
-            : recorderState?.startRecording
+          recorderState?.initRecording? recorderState?.saveRecording: recorderState?.startRecording
         }
       >
         {recorderState?.initRecording ? 'Stop' : 'Start'}

@@ -1,12 +1,13 @@
-import react from 'react';
+import React from 'react';
+import importScript from 'customHooks/importScript';
+const Demo = (props) => {
+  importScript('./class.js');
+};
 
-import './class.js';
 export default function ClassHTML() {
   return (
-    <>
-      <main>
-        <button onclick="init()">start</button>
-      </main>
-    </>
+    <main>
+      <button onclick="init()">start</button>
+    </main>
   );
 }
