@@ -6,10 +6,12 @@ import Waveform from './waveform';
 import WaveformTwo from './waveformtwo';
 import WaveformThree from './waveformthree';
 import ClassHTML from './classHtml';
+import Counter from './counter';
+
 export default function App() {
   return (
     <div>
-      <STT />
+      <Counter />
     </div>
   );
 }
