@@ -135,11 +135,11 @@ export default function STT() {
       </button>
       <button
         className="btn-link mt-3 mb-3"
-        onClick={() => {
-          stop();
-          recorderControls.stopRecording();
-          setRecorderStopState(false);
-        }}
+          onClick={() => {
+            stop();
+            recorderControls.stopRecording();
+            setRecorderStopState(false);
+          }}
       >
         stop
       </button>

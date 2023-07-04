@@ -9,7 +9,7 @@ import ClassHTML from './classHtml';
 export default function App() {
   return (
     <div>
-      <Waveform />
+      <STT />
     </div>
   );
 }
