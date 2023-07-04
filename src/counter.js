@@ -8,6 +8,10 @@ export default function Counter() {
   // state to check stopwatch running or not
   const [isRunning, setIsRunning] = useState(false);
 
+  // show time - h:m:s
+
+  const [timmer, setTimmer] = useState(null);
+
   useEffect(() => {
     let intervalId;
     if (isRunning) {
@@ -32,12 +36,18 @@ export default function Counter() {
   // Method to start and stop timer
   const startAndStop = () => {
     setIsRunning(!isRunning);
+    setTimmer(`${hours}:${minutes.toString().padStart(2, '0')}:
+    ${seconds.toString().padStart(2, '0')}`);
   };
 
   // Method to reset timer back to 0
   const reset = () => {
     setTime(0);
   };
+
+  var numberOfCards = 8; // or more.
+  let aa = 10;
+    
   return (
     <div className="stopwatch-container">
       <p className="stopwatch-time">
@@ -53,6 +63,9 @@ export default function Counter() {
           Reset
         </button>
       </div>
+      {seconds.toString().padStart(2, '0')}
+       <div style={{height:20,background:'red'}}></div> 
+      {aa}
     </div>
   );
 }
