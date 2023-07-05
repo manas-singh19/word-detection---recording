@@ -8,11 +8,13 @@ import WaveformThree from './waveformthree';
 import ClassHTML from './classHtml';
 import Counter from './counter';
 import Renderntimes from './renderNtimes';
+import Image from './image';
+import Imagetwo from './imagetwo.js';
 
 export default function App() {
   return (
     <div>
-      <Renderntimes />
+      <Imagetwo />
     </div>
   );
 }
